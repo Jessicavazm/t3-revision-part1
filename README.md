@@ -271,3 +271,10 @@ The this keyword is a reference to the execution context of a function or block 
 
     person.greet(); // Output: Jess
 
+### JSDoc example
+Highly recommended to use JSDoc to explain your code. More info on how to document on: https://jsdoc.app
+
+    /**
+    * Example JSDoc Comment - Simple Dice Roller Function
+    * @param {number} [diceSize=6] 
+    */

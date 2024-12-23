@@ -1,8 +1,11 @@
 // check if the file has been linked correctly
 console.log('Start of the Dice Roller!!')
 
-
 // simple dice roller function
+/**
+ * Example JSDoc Comment - Simple Dice Roller Function
+ * @param {number} [diceSize=6] 
+ */
 function rollDice(diceSize = 6) {
     console.log(`Rolling a ${diceSize}-sided die...`)
     // math obj and random method
@@ -23,8 +26,10 @@ rollDice(diceSize=10);
 rollDice(20);
 
 
-// specific dice roller function that calls the simple function 
-// Using function expression
+/** 
+ * Specific dice roller function that calls the simple function 
+ * Using function expression
+ */
 const rollDice25 = function() {
     rollDice(25);
 }
@@ -32,7 +37,10 @@ const rollDice25 = function() {
 rollDice25();
 
 
-// Using Arrow function / Anonymous function
+/**
+ * Using Arrow function / Anonymous function
+ * @returns the result of rolling the die
+ */
 const rollDice15 = () => {
     // return rollDice(15);
     // or
@@ -46,6 +54,10 @@ let diceSide15 = rollDice15();
 console.log('The side you rolled in this 15-sided die is: ' + diceSide15)
 
 // if we want more functionality, then we use {}, otherwise we can use the shortened version
+
+/**
+ * Using the Roll Dice fn for an eight sided dice
+ */
 const rollDice8 = () => rollDice(8);
 console.log('The side you rolled for the 8-sided die is: ' + rollDice8())
 
@@ -53,6 +65,13 @@ console.log('The side you rolled for the 8-sided die is: ' + rollDice8())
 // Implementing the callback feature
 // callback is a placeholder for function, in this example the function used is defined in the example above.
 // make sure to return the function
+/**
+ * Description placeholder
+ *
+ * @param {*} side
+ * @param {*} callback
+ * @returns the callback function that will be passed, ideally the rollDice() function
+ */
 function customDiceRoll(side, callback) {
     return callback(side); //rollDice(30);
 }
