@@ -40,6 +40,7 @@ const rollDice15 = () => {
     return result;
 }
 
+
 // Store function in variable
 let diceSide15 = rollDice15();
 console.log('The side you rolled in this 15-sided die is: ' + diceSide15)
@@ -47,4 +48,30 @@ console.log('The side you rolled in this 15-sided die is: ' + diceSide15)
 // if we want more functionality, then we use {}, otherwise we can use the shortened version
 const rollDice8 = () => rollDice(8);
 console.log('The side you rolled for the 8-sided die is: ' + rollDice8())
+
+
+// Implementing the callback feature
+// callback is a placeholder for function, in this example the function used is defined in the example above.
+// make sure to return the function
+function customDiceRoll(side, callback) {
+    return callback(side); //rollDice(30);
+}
+
+result = customDiceRoll(30, rollDice);
+console.log(result);
+
+
+// Callback function is defined when invoking the function itself
+// Example of Hosting the function
+rollMultipleDice(3, 6, (result) => console.log('Rolled: ' + result));
+
+// function to roll multiple dice
+function rollMultipleDice(numDice, diceSize, callback) {
+    // use loop to run multiple dices
+    for (let i=0; i < numDice; i++) {
+        const result = rollDice(diceSize);
+        callback(result);
+    }
+}
+
 

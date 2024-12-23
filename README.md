@@ -98,7 +98,7 @@ Iterates over each element in the array. It works with numbers, strings and arra
     for (let index = 0; index < fruitChoice.length; index++) {
         const element = fruitChoice[index];
         console.log(element);
-    };
+    }
 
 ### forEach iterator
 forEach iterates only over arrays, it iterates over each element. This iterator does not support break and it also requires a callback function as an arg.
@@ -112,7 +112,7 @@ forOf iterates over any iterable object (arrays, strings, maps, sets) elements. 
 
     for (const fruit of fruitChoices) {
         console.log(fruit)
-    };
+    }
 
 ### forIn
 forIn iterates over object's keys. To avoid inherited properties, use hasOwnProperty method.
@@ -121,7 +121,7 @@ forIn iterates over object's keys. To avoid inherited properties, use hasOwnProp
 
     for (let key in person) {
         console.log(`${key}: ${person[key]}`)
-    }; // output: name: Alice age: 25
+    } // output: name: Alice age: 25
 
 ### Map method 
 
@@ -195,6 +195,16 @@ Small pieces of code that performs tasks. Functions takes input in form of argum
 - It is defined using the function keyword (or arrow function syntax).
 - Functions are not tied to any object, though they can work with objects.
 - Function expressions => functions that are defined inside of the object. Parenthesis () are needed to call the function.
+- Characteristics of Functions:
+    - Functions are first-class citizens in JS
+        - Assigned to variables
+        - Passed as arguments to other functions
+        - Returned from functions
+    - Return (obvious one)
+    - Hoisting (Function declarations are hoisted to the top of their scope. This means you can call a function before it has been declared).
+    - Functions expressions doesn't allow hoisting feature.
+    - Scope (Global and Local)
+
 
 ### Arrow Function
 
@@ -260,3 +270,4 @@ The this keyword is a reference to the execution context of a function or block 
     };
 
     person.greet(); // Output: Jess
+
