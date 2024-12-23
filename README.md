@@ -3,7 +3,6 @@
 ## Week 1
 
 - console.log is useful for debugging in JS.
--
 
 ### Declaring variables
 
@@ -23,7 +22,7 @@
 - Const needs to be initialised when declared.
 
 
-### IF/ ELSE
+### If/ Else
 
         if (condition) {
             do this
@@ -58,7 +57,7 @@
             break;
         case 'mango':
             console.log('We have mangoes');
-            break
+            break;
         default:
             console.log('We have another fruit');
             break;
@@ -99,21 +98,21 @@ Iterates over each element in the array. It works with numbers, strings and arra
     for (let index = 0; index < fruitChoice.length; index++) {
         const element = fruitChoice[index];
         console.log(element);
-    }
+    };
 
 ### forEach iterator
 forEach iterates only over arrays, it iterates over each element. This iterator does not support break and it also requires a callback function as an arg.
 
     fruitChoices.forEach(element => {
-        console.log(element.toLocalUpperCase());
-    })
+        console.log(element.toLocalUpperCase())
+    });
 
 ### forOf
 forOf iterates over any iterable object (arrays, strings, maps, sets) elements. It can be terminated earlier and it does not need a callback function.
 
     for (const fruit of fruitChoices) {
         console.log(fruit)
-    }
+    };
 
 ### forIn
 forIn iterates over object's keys. To avoid inherited properties, use hasOwnProperty method.
@@ -121,8 +120,8 @@ forIn iterates over object's keys. To avoid inherited properties, use hasOwnProp
     let person = { name: "Alice", age: 25 };
 
     for (let key in person) {
-        console.log(`${key}: ${person[key]}`);
-    } // output: name: Alice age: 25
+        console.log(`${key}: ${person[key]}`)
+    }; // output: name: Alice age: 25
 
 ### Map method 
 
@@ -130,9 +129,9 @@ Map returns a new array, and every element has a change applied to it.
 
     let fruitChoicesShort = fruitChoices.map(fruit => {
         return fruit.substring(0,3)
-    })
+    });
 
-    console.log(fruitChoicesShort)
+    console.log(fruitChoicesShort);
 
 - Single line map doesn't require a return statement
 - Requires a callback function.
@@ -147,7 +146,7 @@ It returns a new array with the elements that meets the condition. This method a
     console.log(nonCitrusFruits); // output: 'banana', 'apple'
 
 
-## Objects
+### Objects
 
 Stores key-value pairs. Use dot operator or brackets to fetch from objects. Using the object above, fetching a name would look like this: person.name or person['name'] //output: 'Jess'
 
@@ -170,14 +169,14 @@ Stores key-value pairs. Use dot operator or brackets to fetch from objects. Usin
     console.log(Object.keys(person)); //output: (4) ['name', 'age', 'city', 'contact']
 
     // to fetch the nested keys
-    console.log(Object.keys(person.contact))
+    console.log(Object.keys(person.contact));
 
 
 - Objects can be nested inside other objects.
 - You can create functions inside objects (This is called Methods).
 
 
-## Functions
+### Functions
 
 Small pieces of code that performs tasks. Functions takes input in form of arguments. In JS, every function implicitly returns a value, even if no return statement is provided (undefined will be returned in this case). Use the 'function' keyword to define a function + (parameters) + {statements to execute} .
 
@@ -190,7 +189,7 @@ Small pieces of code that performs tasks. Functions takes input in form of argum
     let area = calculateArea(5,3); 
     
     // print the result
-    console.log(area) //output: 15
+    console.log(area); //output: 15
 
 - A function is a standalone block of code that can be called independently.
 - It is defined using the function keyword (or arrow function syntax).
@@ -204,12 +203,12 @@ Small pieces of code that performs tasks. Functions takes input in form of argum
     };
 
 
-## Methods
+### Methods
 
     // defining a function
     function greet(name) {
-        console.log('Hello' + name);
-    }
+        console.log('Hello' + name)
+    };
 
     const person = {
         name: 'Jess',
