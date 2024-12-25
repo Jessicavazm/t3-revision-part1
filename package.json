@@ -4,7 +4,7 @@
   "description": "Dice Rolling Application in the Terminal",
   "main": "src/diceRoller_week2.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/diceRoller_week2"
   },
   "keywords": [
     "dice",

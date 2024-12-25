@@ -298,8 +298,22 @@ https://npmjs.com to check available packages and documentation.
 - Check if Node is installed: nvm -v (nvm is a version manager for node.js)
 - package.json is the heart of the app. It contains packages used, path to main application, scripts, name and version.
 - Important to create your main file inside of a source folder. Eg: src/index.js
+- Scripts are custom commands, scripts can be combined and ran together. No spaces are allowed in the scripts. Scripts also allows another script inside as well.
+
 
 ### Steps to initialise Node
 
 - Create the node package: "npm init -y" (speeds the process fulfilling info automatically). "npm init" initialise the project, but you need to fill some info: package name, description, entry point (where your main app is).
 - How to run application in server side: node path_to_file eg: node src/index.js
+- How to run a script: npm run script_name
+
+        "scripts": {
+            "start": "node src/diceRoller_week2"
+        },
+
+        How to run:
+
+        npm run start
+        or
+        npm start (only works for the "start" script)
+
