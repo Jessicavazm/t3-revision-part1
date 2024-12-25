@@ -1,8 +1,7 @@
 # T3 JS Revision
 
-## Week 1
+## Week 1 - Introduction to JavaScript
 
-- console.log is useful for debugging in JS.
 
 ### Declaring variables
 
@@ -35,7 +34,7 @@
 - Falsy values: zero, negative zero, false, empty string, null, undefined and Not A Number. 
 
 
-### Ternary operator
+### Ternary Operator
 
     condition ? expressionIfTrue : expressionIfFalse;
 
@@ -47,7 +46,7 @@
 - You can use methods such as .toLocalUpperCase() on strings.
 
 
-### Switch case
+### Switch Case
 
     someFruit = 'mango';
 
@@ -68,7 +67,7 @@
 - Without break the switch statement will fall through the subsequent cases regardless if the cases matches or not. 
 
 
-### Short circuit
+### Short Circuit
 
     someFruit is declared in the example above.
     
@@ -81,7 +80,7 @@
 - || (OR) operator returns the first block that is true. If both values are false, it returns the second block.
 
 
-### FOR iterator
+### FOR Iterator
 Iterates over each element in the array. It works with numbers, strings and arrays. It gives you flexibility since you can control index, step and termination. This loop is best used in simple tasks.
 
     for (initialization; condition; increment) {
@@ -100,21 +99,24 @@ Iterates over each element in the array. It works with numbers, strings and arra
         console.log(element);
     }
 
-### forEach iterator
+
+### forEach Loop
 forEach iterates only over arrays, it iterates over each element. This iterator does not support break and it also requires a callback function as an arg.
 
     fruitChoices.forEach(element => {
         console.log(element.toLocalUpperCase())
     });
 
-### forOf
+
+### forOf Loop
 forOf iterates over any iterable object (arrays, strings, maps, sets) elements. It can be terminated earlier and it does not need a callback function.
 
     for (const fruit of fruitChoices) {
         console.log(fruit)
     }
 
-### forIn
+
+### forIn Loop
 forIn iterates over object's keys. To avoid inherited properties, use hasOwnProperty method.
 
     let person = { name: "Alice", age: 25 };
@@ -123,8 +125,8 @@ forIn iterates over object's keys. To avoid inherited properties, use hasOwnProp
         console.log(`${key}: ${person[key]}`)
     } // output: name: Alice age: 25
 
-### Map method 
 
+### Map Method 
 Map returns a new array, and every element has a change applied to it.
 
     let fruitChoicesShort = fruitChoices.map(fruit => {
@@ -136,7 +138,8 @@ Map returns a new array, and every element has a change applied to it.
 - Single line map doesn't require a return statement
 - Requires a callback function.
 
-### Filter method
+
+### Filter Method
 It returns a new array with the elements that meets the condition. This method also requires a callback function. Example bellow is using the && operator.
 
     let nonCitrusFruits = fruitChoices.filter(fruit => {
@@ -147,7 +150,6 @@ It returns a new array with the elements that meets the condition. This method a
 
 
 ### Objects
-
 Stores key-value pairs. Use dot operator or brackets to fetch from objects. Using the object above, fetching a name would look like this: person.name or person['name'] //output: 'Jess'
 
     const person = {
@@ -177,7 +179,6 @@ Stores key-value pairs. Use dot operator or brackets to fetch from objects. Usin
 
 
 ### Functions
-
 Small pieces of code that performs tasks. Functions takes input in form of arguments. In JS, every function implicitly returns a value, even if no return statement is provided (undefined will be returned in this case). Use the 'function' keyword to define a function + (parameters) + {statements to execute} .
 
 
@@ -234,7 +235,7 @@ Small pieces of code that performs tasks. Functions takes input in form of argum
 - Methods have access to the object they belong to via the this keyword.
 - JS has a large range of built-in methods available to use in predefined objects such as .min .max .math
 
-### Example String
+### Example with String
 
     let text = "Hello, World!";
 
@@ -244,9 +245,9 @@ Small pieces of code that performs tasks. Functions takes input in form of argum
     console.log(text.includes("World")); // Output: true
     console.log(text.replace("World", "JavaScript")); // Output: "Hello, JavaScript!"
 
-### Example Array
+### Example with Array
 
-let numbers = [1, 2, 3, 4, 5];
+    let numbers = [1, 2, 3, 4, 5];
 
     numbers.push(6);         // Adds a number towards the end
     console.log(numbers);    // Output: [1, 2, 3, 4, 5, 6]
@@ -258,8 +259,7 @@ let numbers = [1, 2, 3, 4, 5];
     console.log(doubled);     // Output: [2, 4, 6, 8, 10]
 
 
-### This keyword
-
+### THIS Keyword
 The this keyword is a reference to the execution context of a function or block of code. It allows access to the object that "owns" the code being executed.
 
         const person = {
@@ -271,6 +271,7 @@ The this keyword is a reference to the execution context of a function or block 
 
     person.greet(); // Output: Jess
 
+
 ### JSDoc example
 Highly recommended to use JSDoc to explain your code. More info on how to document on: https://jsdoc.app
 
@@ -278,3 +279,27 @@ Highly recommended to use JSDoc to explain your code. More info on how to docume
     * Example JSDoc Comment - Simple Dice Roller Function
     * @param {number} [diceSize=6] 
     */
+
+
+## Week 2 - Node and NPM
+For week 2, we will be working in the server, no need to link JS file to index.html to see how it live. Instead we use 'node path_to_file' to execute the file and see it magic in the terminal.
+
+Node is a runtime environment that lets you run JS outside the browser. Node allows you to create a full stack application, build backend systems, write server-side applications, work with API, databases and files.
+
+Npm is the default package manager for JavaScript. NPM contains a very large library of packages (around 800,000 packages available). Developers can share their own packages and search for packages they want to use in their applications. It contains packages for back-end and front-end and it's the biggest Software Registry nowadays.
+
+Popular libraries include: react, react-dom
+
+https://npmjs.com to check available packages and documentation. 
+
+
+- When creating a repository in Git, you can select the Node .gitignore template.
+- Built on V8 engine (Same engine that is used for Google Chrome).
+- Check if Node is installed: nvm -v (nvm is a version manager for node.js)
+- package.json is the heart of the app. It contains packages used, path to main application, scripts, name and version.
+- Important to create your main file inside of a source folder. Eg: src/index.js
+
+### Steps to initialise Node
+
+- Create the node package: "npm init -y" (speeds the process fulfilling info automatically). "npm init" initialise the project, but you need to fill some info: package name, description, entry point (where your main app is).
+- How to run application in server side: node path_to_file eg: node src/index.js

@@ -1,0 +1,1 @@
+console.log('Dice Roller Application starting...')
