@@ -1,7 +1,7 @@
 # T3 JS Revision
 
-## Week 1 - Introduction to JavaScript
 
+## Week 1 - Introduction to JavaScript
 
 ### Declaring variables
 
@@ -298,7 +298,7 @@ https://npmjs.com to check available packages and documentation.
 - Check if Node is installed: nvm -v (nvm is a version manager for node.js)
 - package.json is the heart of the app. It contains packages used, path to main application, scripts, name and version.
 - Important to create your main file inside of a source folder. Eg: src/index.js
-- Scripts are custom commands, scripts can be combined and ran together. No spaces are allowed in the scripts. Scripts also allows another script inside as well.
+- Scripts are custom commands, scripts can be combined and ran together. No spaces are allowed in the scripts. Scripts also allows to have another script inside.
 
 
 ### Steps to initialise Node
@@ -306,6 +306,8 @@ https://npmjs.com to check available packages and documentation.
 - Create the node package: "npm init -y" (speeds the process fulfilling info automatically). "npm init" initialise the project, but you need to fill some info: package name, description, entry point (where your main app is).
 - How to run application in server side: node path_to_file eg: node src/index.js
 - How to run a script: npm run script_name
+- package-lock.json contains more details about your Node Project. It describes the node's tree application. 
+
 
         "scripts": {
             "start": "node src/diceRoller_week2"
@@ -317,3 +319,12 @@ https://npmjs.com to check available packages and documentation.
         or
         npm start (only works for the "start" script)
 
+
+### NPM Packages
+Dependencies: packages needed to run the specific package. Dependents: Packages that relies on the specific package. Unpacked Size and Updates are important points to look at when getting a package.
+
+--save-dev is used to install packages as a Development Dependency (this reduces the package size).
+
+- inquirer.js: Package used to get user input.
+- nodemon: Package used to automatically restarting the node application when file changes in the directory are detected. Another way to have node automatically restart when a change is made is to use: node --watch
+- JSDoc: Automatically creates JSDoc

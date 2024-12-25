@@ -4,7 +4,10 @@
   "description": "Dice Rolling Application in the Terminal",
   "main": "src/diceRoller_week2.js",
   "scripts": {
-    "start": "node src/diceRoller_week2"
+    "start": "node src/diceRoller_week2",
+    "dev": "nodemon src/diceRoller_week2",
+    "dev_watch": "node --watch",
+    "docs": "jsdoc ./src/*"
   },
   "keywords": [
     "dice",
@@ -13,5 +16,12 @@
     "Fun"
   ],
   "author": "Jess",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^12.3.0"
+  },
+  "devDependencies": {
+    "jsdoc": "^4.0.4",
+    "nodemon": "^3.1.9"
+  }
 }
