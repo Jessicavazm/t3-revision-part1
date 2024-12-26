@@ -5,8 +5,7 @@
   "main": "src/diceRoller_week2.js",
   "scripts": {
     "start": "node src/diceRoller_week2",
-    "dev": "nodemon src/diceRoller_week2",
-    "dev_watch": "node --watch",
+    "dev": "node --watch src/diceRoller_week2",
     "docs": "jsdoc ./src/*"
   },
   "keywords": [

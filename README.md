@@ -198,9 +198,9 @@ Small pieces of code that performs tasks. Functions takes input in form of argum
 - Function expressions => functions that are defined inside of the object. Parenthesis () are needed to call the function.
 - Characteristics of Functions:
     - Functions are first-class citizens in JS
-        - Assigned to variables
-        - Passed as arguments to other functions
-        - Returned from functions
+    - Assigned to variables
+    - Passed as arguments to other functions
+    - Returned from functions
     - Return (obvious one)
     - Hoisting (Function declarations are hoisted to the top of their scope. This means you can call a function before it has been declared).
     - Functions expressions doesn't allow hoisting feature.
@@ -288,11 +288,10 @@ Node is a runtime environment that lets you run JS outside the browser. Node all
 
 Npm is the default package manager for JavaScript. NPM contains a very large library of packages (around 800,000 packages available). Developers can share their own packages and search for packages they want to use in their applications. It contains packages for back-end and front-end and it's the biggest Software Registry nowadays.
 
-Popular libraries include: react, react-dom
-
 https://npmjs.com to check available packages and documentation. 
 
 
+### Important points
 - When creating a repository in Git, you can select the Node .gitignore template.
 - Built on V8 engine (Same engine that is used for Google Chrome).
 - Check if Node is installed: nvm -v (nvm is a version manager for node.js)
@@ -301,8 +300,7 @@ https://npmjs.com to check available packages and documentation.
 - Scripts are custom commands, scripts can be combined and ran together. No spaces are allowed in the scripts. Scripts also allows to have another script inside.
 
 
-### Steps to initialise Node
-
+### Commands to initialise the node project
 - Create the node package: "npm init -y" (speeds the process fulfilling info automatically). "npm init" initialise the project, but you need to fill some info: package name, description, entry point (where your main app is).
 - How to run application in server side: node path_to_file eg: node src/index.js
 - How to run a script: npm run script_name
@@ -319,6 +317,8 @@ https://npmjs.com to check available packages and documentation.
         or
         npm start (only works for the "start" script)
 
+- npm install: this command install all dependencies and packages needed to run the application.
+
 
 ### NPM Packages
 Dependencies: packages needed to run the specific package. Dependents: Packages that relies on the specific package. Unpacked Size and Updates are important points to look at when getting a package.
@@ -326,5 +326,9 @@ Dependencies: packages needed to run the specific package. Dependents: Packages 
 --save-dev is used to install packages as a Development Dependency (this reduces the package size).
 
 - inquirer.js: Package used to get user input.
-- nodemon: Package used to automatically restarting the node application when file changes in the directory are detected. Another way to have node automatically restart when a change is made is to use: node --watch
+- nodemon: Package used to automatically restarting the node application when file changes in the directory are detected. 
+- node --watch: does the same as Nodemon but it's already built in Node. How to use: node --watch path_to_file. How to run: npm run dev
 - JSDoc: Automatically creates JSDoc
+
+
+### Error handling in JS
