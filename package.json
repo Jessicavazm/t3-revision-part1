@@ -17,7 +17,8 @@
   "author": "Jess",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^12.3.0"
+    "inquirer": "^12.3.0",
+    "prompt-sync": "^4.2.0"
   },
   "devDependencies": {
     "jsdoc": "^4.0.4",

@@ -9,8 +9,8 @@ try {
     }
     // console.log("What about this one?") This wont run either, it goes straight to catch
 } catch (error) {
+    // console.error changes the text colour to red
     console.error("Cannot divide by zero!!");
-    // console.log is a yellow flag
     console.log(error);
 } finally {
     console.log("I always run!!");

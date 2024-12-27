@@ -329,6 +329,10 @@ Dependencies: packages needed to run the specific package. Dependents: Packages 
 - nodemon: Package used to automatically restarting the node application when file changes in the directory are detected. 
 - node --watch: does the same as Nodemon but it's already built in Node. How to use: node --watch path_to_file. How to run: npm run dev
 - JSDoc: Automatically creates JSDoc
-
+- prompt-sync: Package used to get input from user.
 
 ### Error handling in JS
+- In JavaScript the try, catch, throw, finally blocks are used to handle errors.
+- console.error: displays the message in red colour (useful for debugging).
+- console.info: provides informational messages.
+- console.debug: provides debugging messages.

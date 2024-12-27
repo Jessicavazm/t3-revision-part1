@@ -1,6 +1,6 @@
-// import inquirer package
-// .default
-const inquirer = require('inquirer').default;
+// import prompt packages
+// const inquirer = require('inquirer').default;]
+const promptSync = require('prompt-sync')();
 
 // ensure file has been linked or started correctly
 console.log('Dice Roller Application starting...')
@@ -12,6 +12,9 @@ console.log('Dice Roller Application starting...')
  * @returns {number} The side of the dice rolled
  */
 function rollDice(diceSide=6) {
+    if (diceSide <=0) {
+        throw new Error ('Dice must be greater than 0.')
+    }
     let diceResult = 0;
     diceResult = Math.ceil(Math.random() * diceSide);
     return diceResult;
@@ -19,14 +22,32 @@ function rollDice(diceSide=6) {
 
 // console.log("The side you rolled is: " + rollDice());
 
-const prompt = inquirer.createPromptModule();
+// Inquirer
+// const prompt = inquirer.createPromptModule();
 
-prompt([
-    {
-        type: 'number',
-        name: 'dice_side',
-        message: 'How many sided dice do you want to roll?'
+// prompt([
+//     {
+//         type: 'number',
+//         name: 'dice_side',
+//         message: 'How many sided dice do you want to roll?'
+//     }
+// ]).then((answer) => {
+//     console.log(rollDice(answer.dice_side))
+// });
+
+
+// PromptSync
+const diceSide = promptSync("How many sided dice do you want to roll? ")
+
+try {
+    //
+    const parsedDiceSide = parseInt(diceSide); 
+    if (isNaN(parsedDiceSide)) {
+        throw new Error ('Please enter a valid number.');
     }
-]).then((answer) => {
-    console.log(rollDice(answer.dice_side))
-});
+    const diceResult = rollDice(diceSide);
+    console.log(`You rolled a ${diceResult}-sided dice.`);
+} catch (error){
+    console.error('You got an error!');
+    console.log(error); // this displays the error stack trace
+}
