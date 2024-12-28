@@ -355,5 +355,7 @@ Example of a Test Scrypt from ED:
 - How to instal (dev environment preferred): npm install --save-dev jest
 - How to run: npm run test
 - When creating test cases, you should create a new folder called "test".
-- Inside of the test folder, creates a new file for each function.
+- Inside of the test folder, creates a new file for each functionality.
 - Conventional name: function_name + test.js eg: niceLogger.test.js
+- "describe" keyword: handy tool used to group related tests together. It has the same syntax as test functions.
+- test.skip: it skips that specific test case
