@@ -36,6 +36,7 @@ function rollDice(diceSide = 6) {
 
 
 // Using PromptSync package
+/** Function to get the desired Dice Side/ Main function */
 function getDiceSide() {
     do {
         const diceSide = promptSync("How many sided dice do you want to roll? ");

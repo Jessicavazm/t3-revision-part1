@@ -336,3 +336,13 @@ Dependencies: packages needed to run the specific package. Dependents: Packages 
 - console.error: displays the message in red colour (useful for debugging).
 - console.info: provides informational messages.
 - console.debug: provides debugging messages.
+
+
+## Week 3 - Jest
+Jest is used to do unit testing (smaller pieces of code). Jest was developed by Facebook and it works with JavaScript code, including Node.js, React apps, Angular, Vue and more. 
+
+- Test Driven Development (TDD): Bottom- top approach. First you create the test and after you develop the application. Red-Green-Refactor is the steps in the process of writing a TDD cycle. 
+    - Red: Write a test that will possibly fail.
+    - Green: Make changes in the test to ensure the test now will pass.
+    - Refactor: This step polishes the code to ensure code is efficient and clean.
+- How to instal (dev environment preferred): npm install --save-dev jest

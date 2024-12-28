@@ -1,11 +1,11 @@
 {
   "name": "t3-revision",
   "version": "1.0.0",
-  "description": "Dice Rolling Application in the Terminal",
-  "main": "src/diceRoller_week2.js",
+  "description": "Terminal App",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node src/diceRoller_week2",
-    "dev": "node --watch src/diceRoller_week2",
+    "start": "node src/index_niceLogger.js",
+    "dev": "node src/index_niceLogger.js",
     "docs": "jsdoc ./src/*"
   },
   "keywords": [
@@ -21,6 +21,7 @@
     "prompt-sync": "^4.2.0"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "jsdoc": "^4.0.4",
     "nodemon": "^3.1.9"
   }
