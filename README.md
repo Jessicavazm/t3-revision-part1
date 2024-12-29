@@ -330,6 +330,7 @@ Dependencies: packages needed to run the specific package. Dependents: Packages 
 - node --watch: does the same as Nodemon but it's already built in Node. How to use: node --watch path_to_file. How to run: npm run dev
 - JSDoc: Automatically creates JSDoc
 - prompt-sync: Package used to get input from user.
+- npm audit: checks for any vulnerabilities on packages that have been installed.
 
 ### Error handling in JS
 - In JavaScript the try, catch, throw, finally blocks are used to handle errors.
@@ -358,4 +359,8 @@ Example of a Test Scrypt from ED:
 - Inside of the test folder, creates a new file for each functionality.
 - Conventional name: function_name + test.js eg: niceLogger.test.js
 - "describe" keyword: handy tool used to group related tests together. It has the same syntax as test functions.
-- test.skip: it skips that specific test case
+- test.skip: it skips that specific test case.
+- How to implement watch functionality in Jest: "testWatch": "jest --watch"
+- Matchers: Methods provided by Jest to assert that values meet specific conditions. They’re typically used with expect(), which wraps the value you're testing.
+- toBe:	Strict equality (===) Primitive values (numbers, strings). This checks the memory references.
+- toEqual: Deep equality (content) Objects, arrays, or nested structures. This checks the value and the data type structure.

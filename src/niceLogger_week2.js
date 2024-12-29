@@ -9,7 +9,14 @@ function sampleTest(){
 
 function messageRepeater(messageToRepeat) {
     // message to repeat
-    // stmts
+    if (Array.isArray(messageToRepeat)) {
+        // sth
+        return [...messageToRepeat, ...messageToRepeat, ...messageToRepeat]
+    }
+    else {
+        let stringMessageToRepeat = messageToRepeat.toString()
+        return stringMessageToRepeat + stringMessageToRepeat + stringMessageToRepeat
+    }
 }
 
 // Exports the module 
