@@ -1,5 +1,5 @@
 // import module from niceLogger.js file (preferred way)
-const { niceLogger, messageRepeater } = require("./niceLogger_week2.js");
+var { niceLogger, messageRepeater } = require("./niceLogger_week2.js");
 
 // Import the file
 // const niceLoggerFile = require("./niceLogger_week2.js");

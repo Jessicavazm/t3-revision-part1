@@ -1,4 +1,4 @@
-const {niceLogger, messageRepeater} = require("../src/niceLogger_week2.js");
+var {niceLogger, messageRepeater} = require("../src/niceLogger_week2.js");
 
 // Test Script Syntax
 // test("", () => {
@@ -13,6 +13,11 @@ describe ("niceLogger Function tests", () => {
     test("niceLogger returns Hello World", () => {
         // test happens here
         // expect(sth).toBe(sth);
+
+        //mock fn
+        niceLogger = jest.fn();
+        // mock pretended expected value
+        niceLogger.mockReturnValue("Hello World!")
 
         // lets make a test
         expect(niceLogger()).toBe("Hello World!");

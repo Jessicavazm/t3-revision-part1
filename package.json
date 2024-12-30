@@ -8,6 +8,7 @@
     "dev": "node src/index_niceLogger.js",
     "test": "jest",
     "testWatch": "jest --watch",
+    "testCoverage": "jest --coverage --watch",
     "docs": "jsdoc ./src/*"
   },
   "keywords": [
