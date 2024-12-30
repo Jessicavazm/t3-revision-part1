@@ -386,3 +386,5 @@ What we can do with Dom?
 - Create and delete elements
 - Edit elements
 
+Important points:
+- It's important to have blocks in HTML

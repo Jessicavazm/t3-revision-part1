@@ -16,3 +16,10 @@ let dataArray = [
 dataArray.forEach((costume) => {
     console.log(costume);
 });
+
+
+// Fetch the element and stores it in a variable
+let costumesContainer = document.getElementById("costumeContainer");
+
+// Add text to the container
+costumesContainer.innerText = "Hello World!";
