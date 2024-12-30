@@ -377,3 +377,12 @@ Example of a Test Scrypt from ED:
     // mock pretended expected value
     niceLogger.mockReturnValue("Hello World!")
 
+
+# Week 3 - Intro to JS DOM 
+Document Object Model stands for the representation of the webpage. When we change the DOM, we can manipulate the web page structure, style and content dynamically without having to re-write or refresh the page.
+
+What we can do with Dom?
+- Find and read elements
+- Create and delete elements
+- Edit elements
+
