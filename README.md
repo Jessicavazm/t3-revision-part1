@@ -365,4 +365,15 @@ Example of a Test Scrypt from ED:
 - toBe:	Strict equality (===) Primitive values (numbers, strings). This checks the memory references.
 - toEqual: Deep equality (content) Objects, arrays, or nested structures. This checks the value and the data type structure.
 - Test coverage: script command that makes sure the implemented test covers all the basic features. It gives you information such as: missed case tests.
-- Mock functions: Known as 'Spies' functions. Spies lets you spy on the behavior of a function. 
+- Globals:
+    - Jest provides global functions like test, expect, and describe to simplify writing tests.
+    - These globals remove the need for imports in every test file.
+    - You can disable them if you prefer explicit imports.
+- Mock functions: Known as 'Spies' functions. Spies lets you spy on the behavior of a function. Mock functions expects pretended values.
+
+    //mock fn
+    niceLogger = jest.fn();
+    
+    // mock pretended expected value
+    niceLogger.mockReturnValue("Hello World!")
+

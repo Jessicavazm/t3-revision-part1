@@ -69,4 +69,29 @@ describe ("messageRepeater Function test", () => {
         expect (repeatedMessage).toEqual("");
         expect (repeatedMessage).toHaveLength(0);
     });
+});
+
+// Using JEST Globals
+
+beforeEach(() => {
+    console.log('Test has been started!');
+});
+
+afterEach(() => {
+    console.log('A test has finished.');
+});
+
+beforeAll(() => {
+    console.log('Testing will begin now!');
+    // for APIS, the possible commands we could run are:
+    // get JWT from the API
+    // store JWT for all tests to use
+    // connection successful, make sure API is active and ready
+    // connection successful, make sure database is available and running
+
+});
+
+afterAll(() => {
+    console.log("All tests has been completed!");
+    // for APIS, delete all the resources that were created
 })
