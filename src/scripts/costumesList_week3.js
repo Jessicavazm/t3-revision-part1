@@ -12,42 +12,55 @@ let dataArray = [
     "Clowns"
 ];
 
+
 // Fetch the element and stores it in a variable
 let costumesContainer = document.getElementById("costumeContainer");
 
-// Create an unordered list tag, ensure you store element in variable
-let costumeContainerList = document.createElement("ul");
 
-// Add text to the container
-// costumesContainer.innerText = "Hello World!";
+function renderData() {
+    
+    // Create an unordered list tag
+    let costumesContainerList = document.createElement("ul");
 
-// Loop to print each costume
-dataArray.forEach((costume) => {
-    // Verify what we are working with
-    console.log(costume);
+    // Removes the existing content from the element
+    costumesContainer.innerText = "";
 
-    // Create the list element
-    let newCostumeEntry = document.createElement("li");
+    // Loop to print each costume
+    dataArray.forEach((costume) => {
+        // Verify what we are working with
+        console.log(costume);
 
-    // Add the value to the HTML element
-    newCostumeEntry.innerText = costume;
+        // Create the list element
+        let newCostumeEntry = document.createElement("li");
 
-    // Add a button to each entry that removes it from the list
-    let removeButton = document.createElement("button");
+        // Add the value to the HTML element
+        newCostumeEntry.innerText = costume;
 
-    // Add a placeholder value/ name to the button
-    // removeButton.innerText = "Remove" + costume;
-    removeButton.innerText = `Remove ${costume}`;
+        // Add a button to each entry that removes it from the list
+        let removeButton = document.createElement("button");
 
-    // Append the element to the container
-    // Here you are appending the newCostumeEntry to the costumeContainerList element
-    costumeContainerList.appendChild(newCostumeEntry);
+        // Add a placeholder value/ name to the button
+        // removeButton.innerText = "Remove" + costume;
+        removeButton.innerText = `Remove ${costume}`;
 
-    // Append Button 
-    costumeContainerList.appendChild(removeButton);
-});
+        // Add an Event Listener to remove costume from list
+        removeButton.onclick = (() => removeCostumeFromDataList(costume));
 
-// Add the container to the HTML Page
-// Here you are appending the costumeContainerList to the costumeContainer element
-costumeContainer.appendChild(costumeContainerList);
+        // Append the element to the container
+        // Here you are appending the newCostumeEntry to the costumeContainerList element
+        costumesContainerList.appendChild(newCostumeEntry);
 
+        // Append Button
+        costumesContainerList.appendChild(removeButton);
+
+        // Add the container to the HTML Page
+        // Append the costumeContainerList to the costumeContainer element
+        costumesContainer.appendChild(costumesContainerList);
+    });
+}
+
+
+function removeCostumeFromDataList(targetItemToRemove) {
+    dataArray = dataArray.filter((costume) => costume != targetItemToRemove);
+    renderData();
+}
