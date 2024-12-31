@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Halloween Costumes</h1>
+    <form id="costumesInputForm">
+        <label for="costumeNameInput">Enter a costume name: </label>
+        <!-- Ensure you add a type for Input -->
+        <input type="text" id="costumeInputText" placeholder="Add a costume to your collection" name="costumeInputText">
+        <!-- When working with forms, use type="submit" -->
+        <input type="submit" id="formInputButton" value="submit">
+
+    </form>
+    <section id="costumeContainer">
+    </section>
+        
+    <script src="./scripts/costumesList_wk3.js"></script>
+    <script>renderData();</script>
+</body>
+</html>
