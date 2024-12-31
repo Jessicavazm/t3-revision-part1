@@ -82,6 +82,10 @@ function addCostumeToDataList(event, targetInputId) {
 
     // Append or push to the dataArray. Since it's an Array, you can use the 'push' method
     dataArray.push(targetTextInput.value);
+
+    // Clear out the input field text
+    targetTextInput.value = "";
+
     // renderData function call to update the page
     renderData();
 }
