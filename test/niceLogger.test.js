@@ -1,4 +1,4 @@
-var {niceLogger, messageRepeater} = require("../src/scripts/niceLogger_week2.js");
+var {niceLogger, messageRepeater} = require("../src/scripts/niceLogger_wk2.js");
 
 // Test Script Syntax
 // test("", () => {

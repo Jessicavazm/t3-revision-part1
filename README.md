@@ -379,12 +379,56 @@ Example of a Test Scrypt from ED:
 
 
 # Week 3 - Intro to JS DOM 
-Document Object Model stands for the representation of the webpage. When we change the DOM, we can manipulate the web page structure, style and content dynamically without having to re-write or refresh the page.
+Document Object Model stands for the representation of the webpage. When we change the DOM, we can manipulate the web page structure, style and content dynamically without having to re-write or refresh the page. 
 
-What we can do with Dom?
-- Find and read elements
-- Create and delete elements
+One important point is to ensure to store an element into a variable when you pretend to reuse or edit the element in a later stage. The example bellow shows a LI element being stored in a variable called newCostumeEntry (this example is from costumesList_week3.js file).
+
+    let newCostumeEntry = document.createElement("li");
+
+
+## What we can do with Dom?
+- Find and read elements:
+    - document.getElementById 
+
+- Create and delete elements:
+    - document.createElement
+
 - Edit elements
+    - .innerText 
 
-Important points:
-- It's important to have blocks in HTML
+- Append elements:
+    - .appendChild
+
+
+### Event Listener
+HTML events are actions that happen to elements on a webpage, like clicking a button or moving the mouse. JavaScript can respond to these events and make things happen. You can add event handler attributes directly in the HTML to run JavaScript code. Or, you can use event listeners in JavaScript functions to handle events more flexibly.
+
+When an event occurs?
+- An HTML web page has finished loading
+- An HTML input field was changed
+- An HTML button was clicked
+
+Types of Event Listeners:
+- onchange: An HTML element has been changed
+- onclick: The user clicks an HTML element
+- onmouseover: The user moves the mouse over an HTML element
+- onmouseout: The user moves the mouse away from an HTML element
+- onkeydown: The user pushes a keyboard key
+- onload: The browser has finished loading the page
+
+More Event Listeners: https://www.w3schools.com/jsref/dom_obj_event.asp
+
+Syntax example from Costume List application:
+
+    formInputButton.addEventListener("click", (event) => addCostumeToDataList(event, "costumeInputText"));
+
+
+Event Type :
+- The first argument ("click") tells the browser what kind of action to listen for.
+
+Event Parameter:
+- The second part, the event object, provides details about what happened during the event, which you can use inside your callback function.
+- Event parameter is useful when you need to prevent default behaviour, know which element had the event listener or access additional information about the event.
+
+
+### Dom Events
