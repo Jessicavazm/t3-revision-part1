@@ -1,6 +1,9 @@
 # T3 JS Revision
 
+
 # Netlify projects
+Link for projects published on Netlify.
+
 [Halloween Costume List application](https://elegant-hummingbird-0a0e38.netlify.app/)
 
 
@@ -434,4 +437,14 @@ Event Parameter:
 - Event parameter is useful when you need to prevent default behaviour, know which element had the event listener or access additional information about the event.
 
 
-### Dom Events
+## Rock, Paper, Scissors application
+Application made on Term 3, Week3-Saturday
+
+
+### CSS
+- padding: 10px, 3px, 10px, 5px: This goes clock-wise 10x top, 3px right, 10px bottom, 5px left 
+- class: give a class to elements when you want to style a group of elements
+- id: give an ID when you need to style an unique element
+- 
+
+
