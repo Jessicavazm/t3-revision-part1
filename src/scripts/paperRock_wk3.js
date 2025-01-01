@@ -1,3 +1,4 @@
+// First file created
 // Get the elements
 const rockButton = document.getElementById("rock");
 const paperButton = document.getElementById("paper");
@@ -5,11 +6,9 @@ const scissorsButton = document.getElementById("scissors");
 const resultDivision = document.getElementById("result");
 const scoreDiv = document.getElementById("score");
 
-
 // Initialise the score variables to be 0
 let userScore = 0;
 let computerScore = 0;
-
 
 // Get the computer choice
 function getComputerChoice () {
@@ -20,10 +19,8 @@ function getComputerChoice () {
 
 }
 
-
 // console to ensure the fn is returning the right output
 // console.log(getComputerChoice());
-
 
 // Write the logic for Winner
 function determineWinner(userChoice, computerChoice){
@@ -45,22 +42,21 @@ function determineWinner(userChoice, computerChoice){
     }
 }
 
-
 // Listen for the button click events
 rockButton.addEventListener('click', () => {
     const computerChoice = getComputerChoice();
     const result = determineWinner('Rock', computerChoice);
-    resultDivision.textContent = `You chose Rock. Computer chose ${computerChoice}. ${result}`
+    resultDivision.textContent = `You chose Rock. Computer chose ${computerChoice}. ${result}`;
 })
 
 paperButton.addEventListener('click', () => {
     const computerChoice = getComputerChoice();
     const result = determineWinner('Paper', computerChoice);
-    resultDivision.textContent = `You chose Paper. Computer chose ${computerChoice}. ${result}`
+    resultDivision.textContent = `You chose Paper. Computer chose ${computerChoice}. ${result}`;
 })
 
 scissorsButton.addEventListener('click', () => {
     const computerChoice = getComputerChoice();
     const result = determineWinner('Scissors', computerChoice);
-    resultDivision.textContent = `You chose Scissors. Computer chose ${computerChoice}. ${result}`
+    resultDivision.textContent = `You chose Scissors. Computer chose ${computerChoice}. ${result}`;
 })
