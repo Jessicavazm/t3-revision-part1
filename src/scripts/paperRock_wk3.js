@@ -3,6 +3,12 @@ const rockButton = document.getElementById("rock");
 const paperButton = document.getElementById("paper");
 const scissorsButton = document.getElementById("scissors");
 const resultDivision = document.getElementById("result");
+const scoreDiv = document.getElementById("score");
+
+
+// Initialise the score variables to be 0
+let userScore = 0;
+let computerScore = 0;
 
 
 // Get the computer choice
@@ -28,8 +34,13 @@ function determineWinner(userChoice, computerChoice){
         (userChoice === 'Paper' && computerChoice === 'Rock') ||
         (userChoice === 'Scissors' && computerChoice === 'Paper')
     ) {
+        // Increment the score and return acknowledgment
+        userScore++;
+        scoreDiv.textContent = `Your Score: ${userScore} | Computer Score: ${computerScore}`;
         return 'You win!';
     } else {
+        computerScore++;
+        scoreDiv.textContent = `Your Score: ${userScore} | Computer Score: ${computerScore}`;
         return 'Computer Wins!';
     }
 }
