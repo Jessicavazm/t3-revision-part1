@@ -6,6 +6,7 @@ Link for projects published on Netlify.
 
 [Halloween Costume List application](https://elegant-hummingbird-0a0e38.netlify.app/)
 
+[Rock Paper Scissors application](https://fascinating-truffle-917847.netlify.app)
 
 ## Week 1 - Introduction to JavaScript
 
