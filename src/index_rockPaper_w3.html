@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors Game</title>
     <!-- To link the css use the link tag -->
-    <link rel="stylesheet" href="./styles/rockPaper_style.css">
+    <link rel="stylesheet" href="./styles/rockPaper_style.css" />
 </head>
+
 <body>
     <h1>Rock, Paper, Scissors</h1>
 
-    <p id="score">Your score: 0 | Computer Score: 0</p>
-    <button id="paper" class="usefulBtn">Paper</button>
-    <button id="rock">Rock</button>
-    <button id="scissors" class="usefulBtn">Scissors</button>
+    <div id="game-mode">
+        <label for="mode">Select Game Mode:</label>
+        <select id="mode">
+            <option value="endless">Endless Mode</option>
+            <option value="best-of">Best-of-X Mode</option>
+        </select>
+        <input type="number" id="rounds" placeholder="Enter rounds" style="display: none" min="1" />
+        <button id="startGame">Start Game</button>
+    </div>
+    <div id="gameContent" style="display: none;">
+        <p id="score">Your score: 0 | Computer Score: 0</p>
+        <button id="paper" class="usefulBtn">Paper</button>
+        <button id="rock">Rock</button>
+        <button id="scissors" class="usefulBtn">Scissors</button>
+    </div>
 
     <p id="result"></p>
     <!-- To link the JS file use the script tag -->
-    <script src="./scripts/paperRock_wk3.js"></script>
+    <script src="./scripts/rockPaperv2_wk3.js"></script>
 </body>
+
 </html>

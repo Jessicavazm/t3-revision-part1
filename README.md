@@ -310,20 +310,18 @@ https://npmjs.com to check available packages and documentation.
 - Create the node package: "npm init -y" (speeds the process fulfilling info automatically). "npm init" initialise the project, but you need to fill some info: package name, description, entry point (where your main app is).
 - How to run application in server side: node path_to_file eg: node src/index.js
 - How to run a script: npm run script_name
+- npm install: this command install all dependencies and packages needed to run the application.
 - package-lock.json contains more details about your Node Project. It describes the node's tree application. 
 
+    "scripts": {
+        "start": "node src/diceRoller_week2"
+    },
 
-        "scripts": {
-            "start": "node src/diceRoller_week2"
-        },
+    How to run:
 
-        How to run:
-
-        npm run start
-        or
-        npm start (only works for the "start" script)
-
-- npm install: this command install all dependencies and packages needed to run the application.
+    npm run start
+    or
+    npm start (only works for the "start" script)
 
 
 ### NPM Packages
@@ -384,12 +382,22 @@ Example of a Test Scrypt from ED:
     niceLogger.mockReturnValue("Hello World!")
 
 
+## Halloween Costume List application 
+Term 3 - Week 3 (Tuesday/ Thursday). Application to let users add new costumes to a Halloween Costume List. 
+
+- Finding and reading elements
+- Creating and Deleting
+- Editing Elements
+
+
 # Week 3 - Intro to JS DOM 
 Document Object Model stands for the representation of the webpage. When we change the DOM, we can manipulate the web page structure, style and content dynamically without having to re-write or refresh the page. 
 
 One important point is to ensure to store an element into a variable when you pretend to reuse or edit the element in a later stage. The example bellow shows a LI element being stored in a variable called newCostumeEntry (this example is from costumesList_week3.js file).
 
     let newCostumeEntry = document.createElement("li");
+
+When working with DOM elements, it's a good practise to duplicate the JS file and make changes to the new file to ensure the application doesn't get cluttered. On the duplicated file, make sure you duplicate the functions and features required for the application to work, and then make the necessary changes to add/ or improve functionality.
 
 
 ## What we can do with Dom?
@@ -437,8 +445,23 @@ Event Parameter:
 - Event parameter is useful when you need to prevent default behaviour, know which element had the event listener or access additional information about the event.
 
 
-## Rock, Paper, Scissors application
-Application made on Term 3, Week3-Saturday
+## Rock, Paper, Scissors application 
+Term 3 - Week 3 (Saturday).
+
+- Generate a random computer Choice.
+- Compare the user's choice to the computer's choice.
+- Determine the winner.
+- Add a feature: Keep Score.
+- Game modes:
+    - Best-of-X Mode
+        - User Input: Prompt the user to enter the desired number of rounds.
+        - Game Loop: Iterate the specified number of rounds.
+        - Scorekeeping: Track the wins for each player.
+        - Final Result: Declare the overall winner based on the final scores.
+    - Endless Mode:
+        - Same concept as the existing one.
+        - Game goes on until the user chooses not to play.
+        - Score is recorded throughout the game.
 
 
 ### CSS
