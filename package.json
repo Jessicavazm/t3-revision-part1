@@ -4,7 +4,7 @@
   "description": "Terminal App",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/scripts/index_envFile_wk4.js",
+    "start": "node --watch src/scripts/index_envFile_wk4.js",
     "dev": "node --watch src/scripts/index_envFile_wk4.js",
     "test": "jest",
     "testWatch": "jest --watch",

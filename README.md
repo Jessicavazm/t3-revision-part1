@@ -507,7 +507,6 @@ Callback Queue:
 
 <b>Event Loop:</b> If the call stack is empty, it takes the next task from the callback queue (or the microtask queue, which has priority) and pushes it onto the stack for execution.
 
-JS Promises
-.then callback functions
-Catch and finally
-File I/O with promises
+
+### FS Node module 
+It’s short for File System and lets you interact with the file system to read, write, update, delete, or manage files and directories. It provides both synchronous and asynchronous methods for file system operations. Asynchronous is the preferred method since it doesn't block the event loop.
