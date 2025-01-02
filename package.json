@@ -4,8 +4,8 @@
   "description": "Terminal App",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/scripts/index_niceLogger.js",
-    "dev": "node src/scripts/index_niceLogger.js",
+    "start": "node src/scripts/index_envFile_wk4.js",
+    "dev": "node --watch src/scripts/index_envFile_wk4.js",
     "test": "jest",
     "testWatch": "jest --watch",
     "testCoverage": "jest --coverage --watch",
@@ -27,5 +27,8 @@
     "jest": "^29.7.0",
     "jsdoc": "^4.0.4",
     "nodemon": "^3.1.9"
+  },
+  "directories": {
+    "test": "test"
   }
 }

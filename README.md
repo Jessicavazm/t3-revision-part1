@@ -469,6 +469,45 @@ Term 3 - Week 3 (Saturday).
 - padding: 10px, 3px, 10px, 5px: This goes clock-wise 10x top, 3px right, 10px bottom, 5px left 
 - class: give a class to elements when you want to style a group of elements
 - id: give an ID when you need to style an unique element
-- 
+ 
 
+# Week 4 - Intro to Async 
 
+### Asynchronous code
+JavaScript is a single thread programming language. Using Asynchronous coding, you can run multiple codes at the same time. A good example is JavaScript setTimeout().
+
+Threads:
+A thread is the smallest unit of execution in a computer's processor.
+
+- Single-Threaded Execution:
+    - Only one thread exists, and tasks are executed one after the other.
+    - Example: JavaScript is single-threaded (using the main thread for synchronous code execution).
+- Multi-Threaded Execution:
+    - A program creates multiple threads, and tasks are distributed among them.
+    - This allows the program to handle multiple tasks at the same time.
+
+How Call Stack works?
+- When you call an async function, it's pushed onto the stack(Web Apis)
+- When that function finishes execution, it's popped off the stack.
+- It's Last-In-First-Out (LIFO), meaning the last function added (or "pushed") is the first one to be removed (or "popped").
+
+Event loop:
+- JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks.
+
+Callback Queue:
+- First in, first out concept
+
+### How the Callback Queue Works with Async Code
+
+<b>Call Stack:</b> This is where JavaScript executes synchronous code. Functions are pushed onto the stack and popped off when done. When you call an async function, it doesn’t block the stack. Instead, it delegates the task to another part of the JavaScript runtime (like Web APIs).
+
+<b>Web APIs (or Background Tasks):</b> For tasks like setTimeout, fetch, or DOM events, JavaScript offloads the job to Web APIs (in browsers) or similar features in Node.js. These APIs handle the task while the call stack keeps running other code.
+
+<b>Callback Queue (or Task Queue):</b> Once the async task is completed (like a timer finishing or data being fetched), the associated callback function is placed in the callback queue. Example: A setTimeout callback or a resolved Promise (via .then).
+
+<b>Event Loop:</b> If the call stack is empty, it takes the next task from the callback queue (or the microtask queue, which has priority) and pushes it onto the stack for execution.
+
+JS Promises
+.then callback functions
+Catch and finally
+File I/O with promises
