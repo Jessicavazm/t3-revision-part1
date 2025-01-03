@@ -541,3 +541,10 @@ Promises can be either resolved or rejected. If the promise is resolved, the cod
 - .finally()
     - Callback Function: Runs when the Promise is settled	
     - Parameter: No arguments
+
+
+## Async/ Await 
+
+
+- When you use async, all the functions needs to be async to work out.
+- For async functions you need the await keyword

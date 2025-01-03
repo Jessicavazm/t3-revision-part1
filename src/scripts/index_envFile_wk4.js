@@ -51,22 +51,50 @@ console.log(contentToWrite)
 // Promise Version on node-fs
 const fs = require('node:fs/promises');
 
-console.log('Before the promise');
+// console.log('Before the promise');
 
-fs.writeFile(".env", contentToWrite)
-    .then(() => {
-        console.log('After the file has been created.');
-    }).then(() => {
-        fs.writeFile(".testenv", contentToWrite)
-            .then(() => {
-                console.log('After the file has been written in the second file.')
-            }).catch((error) => {
-                console.log("Error encountered: ", error.message);
-            });
-    }).catch((error) => {
-        console.log("Error encountered: ", error.message);
-    }).finally(() => {
-        console.log('This block always run.')
+// fs.writeFile(".env", contentToWrite)
+//     .then(() => {
+//         console.log('After the file has been created.');
+//         console.log('Some extra operation happens here...');
+//         throw new Error('Hey, you got an error!');
+    // }).then(() => {
+        // fs.writeFile(".testenv", contentToWrite)
+        //     .then(() => {
+        //         console.log('After the file has been written in the second file.')
+        //     }).catch((error) => {
+        //         console.log("Error encountered: ", error.message);
+        //     });
+    // }).catch((error) => {
+    //     console.log("Error encountered: ", error.message);
+    // }).finally(() => {
+    //     console.log('This block always run.')
+    // });
+
+// console.log('After the promise');
+
+// Async / Await function
+// You need to use await with async function
+async function writeEnvFile(){
+    console.log('Before the await');
+    try {
+        let result = await fs.writeFile('.env', contentToWrite);
+        console.log('Await process executes here...')
+    } catch (error) {
+        console.log("Error occurred: ", error.message);
+    }
+    console.log('After the await');
+}
+
+// How to call this Async function?
+writeEnvFile();
+
+async function app() {
+    console.log('Before calling the app function');
+    await writeEnvFile().then(() => {
+        console.log('Did this work? Lets find out.')
     });
+    console.log('After calling')
+}
 
-console.log('After the promise');
+app();
