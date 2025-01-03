@@ -510,3 +510,34 @@ Callback Queue:
 
 ### FS Node module 
 It’s short for File System and lets you interact with the file system to read, write, update, delete, or manage files and directories. It provides both synchronous and asynchronous methods for file system operations. Asynchronous is the preferred method since it doesn't block the event loop.
+
+### Callback Functions
+A callback function is a function passed as an argument to another function, to be executed later—either after some operation is complete or when an event occurs. You call back the function when it’s time to execute it.
+
+Key Points About Callbacks
+- It’s Just a Function: callback is a regular function that you pass into another function.
+- Executed Later: It gets executed after the "parent" function does its job, hence the term "callback."
+- Common in Asynchronous Code: Frequently used with APIs, timers, and events in JavaScript.
+
+
+## Promises
+Promises can be either resolved or rejected. If the promise is resolved, the code executes but if the promise is rejected it means an error will be caught by the promise method.
+
+- To work with promises, you need to work with fs.
+- A Promise represents an operation that will complete in the future.
+- .then() is a method used to handle the resolved value of a Promise.
+- When a Promise is fulfilled (i.e., it resolves successfully), the function you pass to .then() is executed.
+- .catch block is used to catch errors. For every promise you create, you need to create a catch block (error handling).
+- .finally block always run.
+
+
+### Callback Functions in Each Block
+- .then()
+    - Callback Function: Runs when the Promise resolves successfully	
+    - Parameter: Resolved value
+- .catch()
+    - Callback Function: Runs when the Promise is rejected	
+    - Parameter: Error (rejection reason)
+- .finally()
+    - Callback Function: Runs when the Promise is settled	
+    - Parameter: No arguments
