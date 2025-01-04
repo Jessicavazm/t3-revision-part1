@@ -40,6 +40,17 @@ function renderPokemonData(pokemonData){
 
     // Append the element to the div
     pokemonContainerDiv.appendChild(pokemonTypeList)
+
+    // Create an sound element 
+    pokemonAudioButton = document.createElement('button');
+    pokemonAudioButton.innerText = 'Play sound';
+    pokemonAudioButton.addEventListener('click', () => {
+        let pokemonAudioObject = new Audio(pokemonData.sound);
+        pokemonAudioObject.play();
+    });
+    pokemonContainerDiv.appendChild(pokemonAudioButton);
+
+    PokemonRenderArea.appendChild(pokemonContainerDiv);
 }
 
 // Function to get a random pokemon
