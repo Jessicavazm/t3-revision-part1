@@ -444,6 +444,7 @@ Event Type :
 Event Parameter:
 - The second part, the event object, provides details about what happened during the event, which you can use inside your callback function.
 - Event parameter is useful when you need to prevent default behaviour, know which element had the event listener or access additional information about the event.
+- Leave the event parameter empty if you don’t need to access any details about the event. However, if you need to access event-specific properties, like the clicked element (event.target), prevent the default behavior (event.preventDefault()), stop propagation (event.stopPropagation()), or retrieve details like key presses (event.key), you must include the event parameter in your function
 
 
 ## Rock, Paper, Scissors application 
@@ -529,7 +530,7 @@ Promises can be either resolved or rejected. If the promise is resolved, the cod
 - When a Promise is fulfilled (i.e., it resolves successfully), the function you pass to .then() is executed.
 - .catch block is used to catch errors. For every promise you create, you need to create a catch block (error handling).
 - .finally block always run.
-
+- Promise.all is a method in JavaScript that takes an array of promises and returns a single promise that resolves when all the promises in the array are resolved or rejects if any promise is rejected. It’s a way to run multiple asynchronous operations in parallel and wait for all of them to complete.
 
 ### Callback Functions in Each Block
 - .then()

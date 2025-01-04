@@ -4,6 +4,7 @@ console.log('Pokemon journey begins...')
 const encounterButton = document.getElementById('pokemonEncounterButton');
 const PokemonRenderArea = document.getElementById('encounteredPokemonArea');
 const pokemonContainerDiv = document.getElementById('pokemonContainer');
+const encounterGroupButton = document.getElementById('pokemonGroupEncounterButton');
 
 // Function to fetch Pokemon data and display in Front-end 
 function renderPokemonData(pokemonData){
@@ -13,15 +14,15 @@ function renderPokemonData(pokemonData){
     // add a class to pokemonContainerDiv to style it
     pokemonContainerDiv.classList += 'pokemonCardEntry';
 
-    // create HTML elements and append it
+    // create HTML elements and append elements
+    let pokemonHeading = document.createElement('h1');
+    pokemonHeading.innerText = pokemonData.name;
+    pokemonContainerDiv.appendChild(pokemonHeading);
+
     let pokemonImage = document.createElement('img');
     // .src is the path to the path to pokemon img
     pokemonImage.src = pokemonData.image;
     pokemonContainerDiv.appendChild(pokemonImage);
-
-    let pokemonHeading = document.createElement('h1');
-    pokemonHeading.innerText = pokemonData.name;
-    pokemonContainerDiv.appendChild(pokemonHeading);
 
     let pokemonTypesHeading = document.createElement('h3');
     pokemonTypesHeading.innerText = 'Types: ';
@@ -80,8 +81,8 @@ async function getPokemon() {
 // encounterButton.addEventListener('click', (event) => getPokemon(event));
 
 // encounterButton.addEventListener('click', getPokemon);
-
-encounterButton.addEventListener('click', async (event) => {
+// parameter can be empty if you don't need to access event's details
+encounterButton.addEventListener('click', async () => {
     console.log('Doing something here...');
 
     let pokemonResult = await getPokemon();
@@ -90,4 +91,42 @@ encounterButton.addEventListener('click', async (event) => {
 
     renderPokemonData(pokemonResult);
 });
+
+// Create an event listener for Group Button
+encounterGroupButton.addEventListener('click', async () => {
+    pokemonContainerDiv.innerText = "";
+    // From what we've learnt so far
+    // let pokemonResult1 = await getPokemon();
+    // renderPokemonData(pokemonResult1);
+    // let pokemonResult2 = await getPokemon();
+    // renderPokemonData(pokemonResult2);
+    // let pokemonResult3 = await getPokemon();
+    // renderPokemonData(pokemonResult3);
+    // let pokemonResult4 = await getPokemon();
+    // renderPokemonData(pokemonResult4);
+    // let pokemonResult5 = await getPokemon();
+    // renderPokemonData(pokemonResult5);
+    // let pokemonResult6 = await getPokemon();
+    // renderPokemonData(pokemonResult6);
+
+    // It hits multiple API requests first and once it finishes it sends it out
+    let multiplePokemonResult = await Promise.all([
+        getPokemon(),
+        getPokemon(),
+        getPokemon(),
+        getPokemon(),
+        getPokemon(),
+        getPokemon()
+    ]);
+
+    // Check if the output is as expected
+    console.log(multiplePokemonResult);
+
+    multiplePokemonResult.forEach(renderPokemonData);
+    
+    // Lengthier version of the above code
+    // multiplePokemonResult.forEach((pokemonResult) => {
+    //     renderPokemonData(pokemonResult);
+    // });
+})
 
