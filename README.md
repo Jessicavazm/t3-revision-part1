@@ -544,7 +544,12 @@ Promises can be either resolved or rejected. If the promise is resolved, the cod
 
 
 ## Async/ Await 
+- When you use async, all the functions needs to be Async to work out.
+- For async functions you need the await keyword.
 
 
-- When you use async, all the functions needs to be async to work out.
-- For async functions you need the await keyword
+## Working with Pokemon API 
+T3- Week 4 Thursday - https://pokeapi.co.api/v2/pokemon/ditto
+
+
+
