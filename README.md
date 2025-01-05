@@ -8,10 +8,6 @@ Link for projects published on Netlify.
 
 [Rock Paper Scissors application](https://fascinating-truffle-917847.netlify.app)
 
-[Working with Pokemon API project](https://thunderous-kelpie-761665.netlify.app/)
-
-[Typing test application]()
-
 ## Week 1 - Introduction to JavaScript
 
 ### Declaring variables
@@ -553,22 +549,8 @@ Promises can be either resolved or rejected. If the promise is resolved, the cod
 - For async functions you need the await keyword.
 
 
-### Pokemon API 
-T3 - Week 4 Thursday - https://pokeapi.co.api/v2/pokemon/ditto
+## Working with Pokemon API 
+T3- Week 4 Thursday - https://pokeapi.co.api/v2/pokemon/ditto
 
-Features:
-- Display a random Pokemon
-- Display a group of six Pokemon
 
-### Typing test API
-T3 - Week 4 Saturday - https://random-word.herokuapp.com/home
-
-Features:
-- Randomised words display
-- Typing Input
-- Real-Time stats (WPM and accuracy)
-- Countdown Timer
-- Quality of Life Improvements
-
-Update: API Link is broken, I'll try to redo this project with a different API.
 

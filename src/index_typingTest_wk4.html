@@ -4,30 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Speed Test</title>
-    <!-- To link the css use the link tag -->
-    <link rel="stylesheet" href="./styles/typingTest_style.css" />
+    <link rel="stylesheet" href="./styles/typingTest_style.css">
 </head>
 <body>
     <div class="container">
         <h1>Typing Speed Test</h1>
-
+        
         <!-- Play Button -->
-        <button id="'playButton" class="play-button">Let's Begin!</button>
-
+        <button id="playButton" class="play-button">Let's Begin</button>
+        
         <!-- Sentence Display Area -->
         <div id="sentenceDisplay" class="sentence-display">
-            <!-- This will show the sentence fetched from the API -->
-             A bunch of random words appear
+            <!-- This will show the sentence fetched from the API. -->
         </div>
 
         <!-- Typing Text Input Field -->
-         <input id="inputField" class="input-field" type="text" placeholder="Start typing here...">
+        <input type="text" id="inputField" class="input-field" placeholder="Start typing here..." hidden>
 
         <!-- Results Section -->
-         <di class="results">
+        <div id="resultsSection" class="results">
             <!-- This will show results like WPM and accuracy -->
-             Game Finished. Your WPM: 60 Accuracy:100
-         </div>
+        </div>
     </div>
     <script src="./scripts/typingTest_wk4.js"></script>
 </body>
