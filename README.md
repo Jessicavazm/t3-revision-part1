@@ -549,8 +549,21 @@ Promises can be either resolved or rejected. If the promise is resolved, the cod
 - For async functions you need the await keyword.
 
 
-## Working with Pokemon API 
-T3- Week 4 Thursday - https://pokeapi.co.api/v2/pokemon/ditto
+### Pokemon API 
+T3 - Week 4 Thursday - https://pokeapi.co.api/v2/pokemon/ditto
+Features:
+- Display a random Pokemon
+- Display a group of six Pokemon
 
+
+### Typing test API
+T3 - Week 4 Saturday - https://random-word-api.herokuapp.com
+
+Features:
+- Randomised words display
+- Typing Input
+- Real-Time stats (WPM and accuracy)
+- Countdown Timer
+- Quality of Life Improvements
 
 
