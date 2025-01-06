@@ -13,6 +13,7 @@ const sentenceDisplay = document.getElementById("sentenceDisplay");
 const inputField = document.getElementById("inputField");
 const resultsSection = document.getElementById("resultsSection");
 const timerDisplay = document.getElementById('timerDisplay');
+const restartButton = document.getElementById('restartButton');
 
 // Sentence Fetching function
 async function getRandomSentence(wordCount) {
@@ -32,14 +33,15 @@ async function getRandomSentence(wordCount) {
 async function displaySentence() {
     // Fetch sentence with 10 words
     randomSentence = await getRandomSentence(10);
+
     // Display the words in the HTML content
     sentenceDisplay.textContent = randomSentence;
-
 }
 
 // Event Listener
 playButton.addEventListener('click', startGame);
 inputField.addEventListener('input', trackTyping);
+restartButton.addEventListener('click', restartGame);
 
 // Start the game
 function startGame() {
@@ -55,13 +57,31 @@ function startGame() {
     inputField.style.display = 'block';
     sentenceDisplay.style.display = 'block';
     timerDisplay.style.display = 'block';
+    playButton.style.display = 'none';
+    restartButton.style.display = 'block';
+    restartButton.style.margin = 'auto';
+}
+
+// setInterval executes the function after 1s
+function startTimer() {
+    timerInterval = setInterval(() => {
+        if (timer > 0) {
+            timer--;
+            timerDisplay.textContent = `Time Left: ${timer}s`;
+        } 
+        else {
+            endGame();
+        }
+    }, 1000); // 1000ms = 1s
 }
 
 function trackTyping() {
-    console.log(startTime);
+    // console.log(startTime);
     if (!startTime) {
         // Record start time on first input
         startTime = new Date();
+        console.log('time set:', startTime);
+        startTimer();
     }
 
     const typedText = inputField.value;
@@ -70,6 +90,11 @@ function trackTyping() {
     totalCharacters = typedText.length;
     correctCharacters = countCorrectCharacters(typedText, sentence);
 
+    if (typedText === sentence) {
+        // End the game if user finishes early
+        endGame();
+    }
+    
     updateStats();
 }
 
@@ -101,13 +126,48 @@ function displayResults(wpm, accuracy) {
 function calculateWPM() {
     // Return time in seconds
     const timeElapsed = (new Date() - startTime) / 1000;
+
     // Return the correct words per minute
     wpm = Math.floor((correctCharacters / 5) / (timeElapsed / 60));
     console.log("WPM: ", wpm);
     return wpm
 }
 
-function endGame() {
+// Restart Game Functionality
+function restartGame() {
+    // Reset game variable and UI elements
+    correctCharacters = 0;
+    totalCharacters = 0;
+    startTime = null;
+    // Reset Timer
+    timer = 10;
+    clearInterval(timerInterval);
 
+    // Reset and enable input fields
+    inputField.value = '';
+    inputField.style.display = 'block';
+
+    // Display the new sentence and reset the other UI Elements
+    displaySentence();
+    resultsSection.innerHTML = '';
+    timerDisplay.textContent = `Time Left: ${timer}s`;
+    playButton.style.display = 'none';
+
+}
+
+function endGame(){
+    // Stop the timer
+    clearInterval(timerInterval);
+    
+    // Disable the input field after the game ends
+    inputField.style.display = 'none';
+    
+    // Calculate the final accuracy
+    const accuracy = Math.floor((correctCharacters / totalCharacters) * 100);
+    
+    // Display the result in the resultDiv
+    resultsSection.innerHTML = `<p>Game Over! Your Final WPM: ${wpm} | Accuracy: ${accuracy}%</p>`;
+    // Show the restart button
+    restartButton.style.display = 'block';
 }
 
