@@ -38,3 +38,8 @@ body {
 .play-button:hover {
     background-color: mediumseagreen
 }
+
+.timer-display {
+    color: rgb(14, 86, 59);
+    margin-top: 10px;
+}
