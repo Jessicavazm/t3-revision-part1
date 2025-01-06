@@ -118,7 +118,7 @@ function updateStats() {
     displayResults(wpm, accuracy);
 }
 
-function displayResults(wpm, accuracy) {    
+function displayResults(wpm, accuracy) {   
     resultsSection.innerHTML = `WPM: ${wpm} | Accuracy: ${accuracy}%`;
 }
 
@@ -162,7 +162,8 @@ function endGame(){
     // Disable the input field after the game ends
     inputField.style.display = 'none';
     
-    // Calculate the final accuracy
+    // Calculate the final accuracy && wpm
+    const wpm = calculateWPM();
     const accuracy = Math.floor((correctCharacters / totalCharacters) * 100);
     
     // Display the result in the resultDiv

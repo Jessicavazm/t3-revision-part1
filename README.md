@@ -8,6 +8,8 @@ Link for projects published on Netlify.
 
 [Rock Paper Scissors application](https://fascinating-truffle-917847.netlify.app)
 
+[Get one or six Pokemon application](https://thunderous-kelpie-761665.netlify.app/)
+
 [Typing Test application](https://superb-parfait-86a5c9.netlify.app)
 
 ## Week 1 - Introduction to JavaScript
